@@ -1,7 +1,9 @@
+import 'package:app/constants/colors.dart';
 import 'package:app/screens/entry.dart';
 import 'package:flutter/material.dart';
 import 'package:fquery/fquery.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(
@@ -22,7 +24,18 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Nairanow',
       debugShowCheckedModeBanner: false,
-      home: EntryScreen(),
+      theme: ThemeData(
+        useMaterial3: true,
+        primaryColor: AppColors.primary,
+        scaffoldBackgroundColor: AppColors.background,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColors.primary,
+          brightness: Brightness.dark,
+          background: AppColors.background,
+        ),
+        textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
+      home: const EntryScreen(),
     );
   }
 }
