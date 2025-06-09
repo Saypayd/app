@@ -63,6 +63,7 @@ dependencies:
   timeago: ^3.7.1
   currency_formatter: ^2.2.3
   slider_button: ^2.1.0
+  record: ^6.0.0
 
 
 dev_dependencies:
